@@ -115,3 +115,40 @@ let case1 = [1,2,3,4,5,6,7,8]
 
 
 reverse(case1)
+
+
+//5
+
+import Foundation
+
+let case2 = [1,2,3,4,5,6,7,8]
+
+func randomFromZeroTo(number: Int) -> Int{
+    return Int(arc4random_uniform(UInt32(number)))
+}
+
+func randomArray(array: [Int])->[Int] {
+    if array.count==0 {
+        return array
+    }
+    var result = array
+    var i = array.count
+    while(--i > 0){
+        let j = randomFromZeroTo(i+1)
+        let temp = result[i]
+        result[i] = result[j]
+        result[j] = temp
+    }
+    
+    return result
+}
+
+randomArray(case2)
+
+randomArray(case2)
+randomArray(case2)
+randomArray(case2)
+
+randomArray(case2)
+randomArray(case2)
+randomArray(case2)
